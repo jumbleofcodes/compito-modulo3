@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-    <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
+    <div class="content login-container">
         <div class="mb-4">
             <label class="block text-grey-darker text-sm font-bold mb-2" for="username">
                 Email
@@ -17,10 +17,7 @@
                    id="password" value="password" type="password" placeholder="******************">
         </div><br>
         <div class="flex items-center justify-between">
-            <button class="_evt-button-login"
-                    type="button">
-                Log in
-            </button>
+            <input class="_evt-button-login" type="submit" value="Login">
         </div>
     </div>
 

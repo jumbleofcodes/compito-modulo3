@@ -1,3 +1,7 @@
+.login-container {
+    margin: 20%;
+}
+
 /* $navbar*/
 nav.navbar {
     position: fixed;
@@ -50,7 +54,7 @@ nav.navbar .navbar__inner {
 }
 
 .tagged-users {
-    padding: 0px 10px;
+    padding: 0px 5px;
 }
 
 /* $inputs*/
@@ -109,15 +113,6 @@ select:focus {
 .hidden {
     display: none;
 }
-
-.pointer-events-none {
-    pointer-events: none;
-}
-
-.opacity-50 {
-    opacity: .5;
-}
-
 
 /* form */
 .custom-form {

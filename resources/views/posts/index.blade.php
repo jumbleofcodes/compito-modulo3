@@ -3,13 +3,11 @@
 @section('content')
         <nav class="navbar">
             <div class="navbar__inner">
-                <label class="user-container" style=" padding: 15px; border-radius: 15px; border: 2px solid #ececec;">
-                    <span class="material-icons"  style="font-size:24px;">person</span>
-                    <label class="user"></label>
-                </label>
+                <span class="material-icons"  style="font-size:24px;">person</span>
+                <label class="user"></label><br>
 
-                <input class="_evt-new-post" onClick="window.location.href='/posts/create'" type="submit" value="Add new post">
-                <input class="_evt-logout" type="submit" value="Logout">
+                <input class="_evt-new-post" style="background-color: #ff9757" onClick="window.location.href='/posts/create'" type="submit" value="Add new post">
+                <input class="_evt-logout" style="background-color: #ff9757" type="submit" value="Logout">
             </div>
         </nav>
         <div class="feed-container">

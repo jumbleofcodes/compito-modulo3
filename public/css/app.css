@@ -1,16 +1,16 @@
 /*$body*/
 body{
-    background-color: #ffffff;
+    background-color: ;
     padding-top: 1%;
     padding-right: 1%;
     flex-direction: row;
 }
 
 body .content{
-    margin-top: 50px;
+    margin: 50px;
     padding: 20px;
     background-color: #ffdf68;
-    border: 1px solid #ececec;
+    border: 2px solid #ff9757;
     border-radius: 10px;
 }
 
@@ -24,6 +24,12 @@ input[type=submit] {
     background: white ;
     cursor: pointer;
     border-radius: 5px;
+    border: 2px solid #ff9757;
+}
+
+input[type="submit"]:hover {
+    border: 1px solid #ffffff;
+    color: #000;
 }
 
 /*Atomic Css*/
