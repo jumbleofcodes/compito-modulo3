@@ -1,0 +1,62 @@
+/*$body*/
+body{
+    background-color:#edf2f7;
+    padding: 90px;
+}
+
+/*$header*/
+header{
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    top:0;
+    left: 0;
+}
+
+header nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+header nav ul li{
+    padding: 5px 15px;
+}
+
+body .content{
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ececec;
+    border-radius: 10px;
+}
+
+/*$table*/
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+/*$card*/
+
+/*Atomic Css*/
+.w-full{
+    width: 100%;
+}
+
+.p-20{
+    padding: 20px;
+}
+
+

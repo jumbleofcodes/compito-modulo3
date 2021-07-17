@@ -4,8 +4,7 @@
     <nav class="navbar">
         <div class="navbar__inner">
             <div class="user"></div>
-            <button class="_evt-new-post">Button</button>
-            <button class="_evt-new-post" onClick="location.href='/posts/create-post'">Add new post</button>
+            <button class="_evt-new-post" onClick="window.location.href='/posts/create'">Add new post</button>
             <button class="_evt-logout">Logout</button>
         </div>
 

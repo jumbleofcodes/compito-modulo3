@@ -4,18 +4,20 @@
     <div class="content">
         <input type="hidden" class="_evt-id" value="{{ $id }}">
         <div class="flex flex-col">
-            <h2>Update</h2>
+            <h2>Edit post</h2>
             <div class="custom-form">
                 <label class="styled-label">
                     <small> Title</small>
-                    <input class="_evt-post-title" type="text">
-                </label><br>
+                    <textarea class="_evt-post-title" style="resize: none"></textarea>
+                </label>
                 <label class="styled-label">
                     <small>Description</small>
-                    <input class="_evt-post-description" type="text">
+
+                    <textarea class="_evt-post-description" style="resize: vertical" rows="5"> </textarea>
                 </label>
             </div>
             <div class="flex w-full justify-end mt-4">
+                <button class="_evt-back">Back</button>
                 <button class="_evt-save">Save</button>
             </div>
         </div>
@@ -28,6 +30,10 @@
             let postId = $('._evt-id').val();
             let $postTitle = $('._evt-post-title');
             let $postDescription = $('._evt-post-description');
+
+            $("._evt-back").click(function () {
+                window.location = '/posts';
+            });
 
             //Get post
             $.ajax({
