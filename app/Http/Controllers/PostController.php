@@ -2,25 +2,28 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
-class AuthController extends Controller
+class PostController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
-     * @return Response
+     *vendo
+     * @return Application|Factory|View|Response
      */
     public function index()
     {
-        return view('auth.login');
+        return view('posts.index');
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return void
+     * @return Application|Factory|View|Response
      */
     public function create()
     {
@@ -53,11 +56,11 @@ class AuthController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param int $id
-     * @return void
+     * @return View
      */
-    public function edit($id)
+    public function edit(int $id): View
     {
-        //
+        return view('posts.edit', ['id' => $id]);
     }
 
     /**
@@ -82,6 +85,4 @@ class AuthController extends Controller
     {
         //
     }
-
-
 }
