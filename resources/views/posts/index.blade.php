@@ -1,19 +1,21 @@
 @extends('app')
 
 @section('content')
-    <nav class="navbar">
-        <div class="navbar__inner">
-            <div class="user"></div>
-            <button class="_evt-new-post" onClick="window.location.href='/posts/create'">Add new post</button>
-            <button class="_evt-logout">Logout</button>
-        </div>
+        <nav class="navbar">
+            <div class="navbar__inner">
+                <label class="user-container" style=" padding: 15px; border-radius: 15px; border: 2px solid #ececec;">
+                    <span class="material-icons"  style="font-size:24px;">person</span>
+                    <label class="user"></label>
+                </label>
 
-    </nav>
-    <div class="external-container">
-        <div class="_evt-spinner loader">Loading...</div>
-        <div class="feed">
+                <input class="_evt-new-post" onClick="window.location.href='/posts/create'" type="submit" value="Add new post">
+                <input class="_evt-logout" type="submit" value="Logout">
+            </div>
+        </nav>
+        <div class="feed-container">
+            <div class="_evt-spinner loader">Loading...</div>
+            <div class="feed"></div>
         </div>
-    </div>
 
     <script>
         $(document).ready(function () {
@@ -32,7 +34,7 @@
                 success: function (response) {
                     if (response.hasOwnProperty('data')){
                         let user = response.data.name;
-                        $(".user").append(`<div> ${user} </div>`);
+                        $(".user").append(`<label>${user}</label>`);
                     }
                 },
                 error: function (error) {
@@ -67,17 +69,15 @@
                             $('.feed').append(`
                                 <div class="card">
                                     <div class="post-content">
-                                        <strong>${title}</strong><br>
-                                        ${description}
+                                        <strong>${title}</strong><br>${description}
                                     </div>
-                                    <div class="tagged-users">
-                                        ${users}
+                                    <div class="tagged-users">${users}</div>
+
+                                    <div class="table-actions">
+                                        <input class="_evt-edit-post-${item.id}" onClick="location.href='/posts/${item.id}/edit'" type="submit" value="Edit">
+                                        <input class="_evt-destroy-post-${item.id}" type="submit" value="Delete">
                                     </div>
-                                    <div class="button-container">
-                                        <button class="_evt-edit-post-${item.id}" onClick="location.href='/posts/${item.id}/edit'">Edit</button>
-                                        <button class="_evt-destroy-post-${item.id}">Delete</button>
-                                    </div><br>
-                                </div>
+                                </div><br>
                             `);
 
                             $spinner.hide()

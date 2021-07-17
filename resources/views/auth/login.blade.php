@@ -17,7 +17,7 @@
                    id="password" value="password" type="password" placeholder="******************">
         </div><br>
         <div class="flex items-center justify-between">
-            <button class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded _evt-button-login"
+            <button class="_evt-button-login"
                     type="button">
                 Log in
             </button>

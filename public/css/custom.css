@@ -1,31 +1,30 @@
 /* $navbar*/
 nav.navbar {
     position: fixed;
-    width: 100%;
+    width: 18%;
+    height: 100%;
     top: 0;
     left: 0;
     right: 0;
-    background-color: #fff;
-    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+    background-color: #ff9757;
 }
 
 nav.navbar .navbar__inner {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav.navbar .navbar__inner a {
-    color: #808080;
-    text-decoration: none;
-}
 
 /* $table-actions */
 .table-actions {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 100%;
     align-items: center;
-    padding: 10px 0;
 }
 
 .styled-label {
@@ -35,6 +34,23 @@ nav.navbar .navbar__inner a {
 
 .styled-label small {
     padding-bottom: 5px;
+}
+
+/* $post content */
+.card{
+    background-color: #ffdf68;
+    border-radius: 5px;
+    border: 2px solid #ff9757;
+    padding: 20px 5px;
+}
+
+.post-content {
+    border-radius: 5px;
+    padding: 5px 5px;
+}
+
+.tagged-users {
+    padding: 0px 10px;
 }
 
 /* $inputs*/
@@ -102,45 +118,6 @@ select:focus {
     opacity: .5;
 }
 
-/* $pagination */
-.pagination-container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    flex-wrap: wrap;
-    padding: 0 10px;
-}
-
-.pagination-container li {
-    margin: 0 5px;
-}
-
-.pagination-container li:first-child {
-    margin-left: 0;
-}
-
-.pagination-container li:last-child {
-    margin-right: 0;
-}
-
-.pagination-container li button {
-    border: none;
-    cursor: pointer;
-    background-color: #fff;
-    color: #808080;
-}
-
-.pagination-container li button:hover {
-    color: darkblue;
-}
-
-.pagination-container li button.selected {
-    pointer-events: none;
-    color: #ececec;
-}
 
 /* form */
 .custom-form {
@@ -152,14 +129,14 @@ select:focus {
 /*768*/
 @media only screen and (min-width: 768px) {
     .custom-form {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 }
 
 /*1024*/
 @media only screen and (min-width: 1024px) {
     .custom-form {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 }
 
@@ -231,3 +208,4 @@ select:focus {
         transform: rotate(360deg);
     }
 }
+

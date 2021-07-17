@@ -16,9 +16,9 @@
                     <textarea class="_evt-post-description" style="resize: vertical" rows="5"> </textarea>
                 </label>
             </div>
-            <div class="flex w-full justify-end mt-4">
-                <button class="_evt-back">Back</button>
-                <button class="_evt-save">Post it!</button>
+            <div class="table-actions">
+                <input class="_evt-back" type="submit" value="Back">
+                <input class="_evt-save" type="submit" value="Post it!">
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-    <div class="content">
+    <div class="content shadow bg-white rounded-lg h-18">
         <input type="hidden" class="_evt-id" value="{{ $id }}">
         <div class="flex flex-col">
             <h2>Edit post</h2>
@@ -16,9 +16,9 @@
                     <textarea class="_evt-post-description" style="resize: vertical" rows="5"> </textarea>
                 </label>
             </div>
-            <div class="flex w-full justify-end mt-4">
-                <button class="_evt-back">Back</button>
-                <button class="_evt-save">Save</button>
+            <div class="table-actions">
+                <input class="_evt-back" type="submit" value="Back">
+                <input class="_evt-save" type="submit" value="Save">
             </div>
         </div>
     </div>
